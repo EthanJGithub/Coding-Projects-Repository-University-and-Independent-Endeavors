@@ -1,29 +1,6 @@
-// ========================================================================
-// CSCI 3230 Data Structures
-// Instructor: Yao Xu, Ph.D.
-//
-// Coding Quiz 8
-//
-// =========================== Requirements =============================== 
-// Implement the counting sort algorithm to sort elements of an array
-// into non-decreasing order.
-//
-// Please use appropriate data types and design appropriate output to
-// demonstrate the correctness of your code.
-//
-// Your output may look as follows:
-// ------------------------------------------------------------------------
-// Input array: e a b a c k i k s f o c g 
-// Sorted array: a a b c c e f g i k k o s 
-//
-// ============================== Note ====================================
-//
-// 1. DO NOT MODIFY OR DELETE ANY GIVEN CODE OR COMMENTS!!!
-// 2. You ONLY need to write code under each comment "YOUR CODE GOES HERE".
-// 3. Modify the file name to "CountingSort.java" to compile and run.
-//
-// ========================================================================
-
+/* It takes an input array of characters, sorts the elements in non-decreasing order, and then outputs the sorted array. The Counting Sort algorithm works by counting the occurrences of each element in the input array, determining the correct positions of the elements in the sorted array, and then constructing the sorted array accordingly. 
+The code includes the main method to test the countingSort method on a given input array and prints both the input array and the resulting sorted array.
+*/
 public class CountingSort {
 
 	public static char[] countingSort(char arr[]) {
