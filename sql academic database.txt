@@ -1,0 +1,43 @@
+create database a;
+use a;
+CREATE TABLE Student (
+  Id INTEGER PRIMARY KEY,
+  Name VARCHAR(100),
+  Address VARCHAR(150),
+  Status VARCHAR(100)
+);
+
+CREATE TABLE Professor (
+  Id INTEGER PRIMARY KEY,
+  Name VARCHAR(100),
+  DeptId VARCHAR(100)
+);
+
+CREATE TABLE Course (
+  DeptId VARCHAR(100),
+  CrsCode VARCHAR(8),
+  CrsName VARCHAR(100),
+  Descr VARCHAR(250),
+  PRIMARY KEY (CrsCode),
+  UNIQUE (DeptId, CrsName)
+);
+
+CREATE TABLE Teaching (
+  ProfId INTEGER,
+  CrsCode VARCHAR(8),
+  Semester VARCHAR(10),
+  PRIMARY KEY (CrsCode, Semester),
+  FOREIGN KEY (ProfId) REFERENCES Professor(Id),
+  FOREIGN KEY (CrsCode) REFERENCES Course(CrsCode)
+);
+
+CREATE TABLE Transcript (
+  StudId INTEGER,
+  CrsCode VARCHAR(8),
+  Semester VARCHAR(10),
+  Grade VARCHAR(2),
+  primary key (StudId, CrsCode, Semester),
+  foreign key (StudId) REFERENCES Student(Id),
+  foreign key (CrsCode, Semester) REFERENCES Teaching(CrsCode, Semester),
+  foreign key (CrsCode) REFERENCES Course(CrsCode)
+);
