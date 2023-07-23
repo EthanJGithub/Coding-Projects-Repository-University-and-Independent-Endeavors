@@ -1,3 +1,14 @@
+/* The "CourseFX" code package is a JavaFX application that manages and displays course and student information. The application allows users to interactively view and update student scores for a course.
+
+Upon execution, the application creates a graphical user interface (GUI) with two main scenes:
+
+"showStudents" Scene: This scene displays a list of students enrolled in the course along with their average scores. Each student's name, average score, and a button to view their individual scores are presented. Users can click on the "Submit" button to add a new student to the course by providing a name and student ID. Additionally, they can view the individual scores of each student by clicking on the corresponding student's button.
+
+"showScores" Scene: This scene displays the individual scores of a selected student. Users can enter new scores for various assignments and update the displayed scores accordingly. The "Submit" button allows the addition of new assignments and their corresponding scores.
+
+The application utilizes JavaFX elements such as Text, Labels, Buttons, and TextFields to create an interactive and user-friendly interface. It demonstrates the use of a Course class, Student class, and Score class to manage and represent course and student data.
+*/
+
 package assignment;
 
 import java.util.ArrayList;
