@@ -115,7 +115,7 @@ public class RainfallTracker {
 			// take in user input from scanner and store in var cancel.
 			String cancel = scanner.next();
 			// check and see if cancel is = "x". If it is, then program will terminate.
-			if(cancel.equals("x")) {
+			if("x".equals(cancel)) {
 				return false;
 			}
 			// if the user doesn't input x the program converts their input into an integer and stores it in RainfallData array
