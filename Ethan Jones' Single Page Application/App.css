@@ -1,0 +1,519 @@
+/* App.css */
+
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black; /* Set default text color */
+}
+.reset-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #003366;
+  color: #fafafa;
+  padding: 10px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  animation: spin 5s linear infinite, changeColors 2s ease-in-out infinite;
+  transition: color 0.5s ease-in-out;
+}
+
+.reset-button:hover {
+  color: #4caf50;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes changeColors {
+  from {
+    background-color: #ff4500;
+  }
+  to {
+    background-color: #4caf50;
+  }
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+.weather-info {
+  text-align: center;
+}
+
+.theme-buttons {
+    margin-top: 10px;
+}
+
+.theme-buttons button {
+    margin-right: 10px;
+}
+
+/* Add animation for smooth scrolling links */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+nav#scrollLinks {
+    position: fixed;
+    top: 0;
+    right: 10px;
+    transform: translateY(0);
+    color: white; /* Adjust link color for better readability */
+    display: flex;
+    flex-direction: column;
+}
+
+nav#scrollLinks a {
+    color: #fff; /* Link color */
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 20px; /* Rounded shape */
+    background: linear-gradient(to right, #4f44ff, #9f74ff); /* Gradient background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+nav#scrollLinks a:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 0 20px rgba(255, 252, 0, 0.8); /* Change shadow color on hover */
+    animation: pulse 1s infinite alternate; /* Add pulsating effect on hover */
+}
+/* Add animation for the show user interactions button */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Styles for the show user interactions button */
+#showUserInteractions {
+    padding: 15px 30px;
+    background-color: #ff5722; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 25px; /* Rounded shape */
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: all 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+#showUserInteractions:hover {
+    transform: translateY(-3px); /* Move up slightly on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+    animation: pulse 1s infinite alternate; /* Add pulsating effect on hover */
+}
+
+/* Other existing styles remain unchanged */
+
+main {
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center-content h2,
+.center-content p {
+    margin-bottom: 20px;
+    color: black; /* Adjust text color for better readability */
+}
+
+.image-grid {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.image-grid > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-grid img {
+    width: auto;
+    max-width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: transform 0.5s ease; /* Add transition for smooth transformation */
+}
+
+.image-grid img.enlarged {
+    transform: scale(1.5); /* Increase scale factor for enlarged images */
+    z-index: 10; /* Make sure enlarged images are above others */
+    position: relative; /* For z-index to work correctly */
+}
+
+.likes-button {
+    padding: 8px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.likes-button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#homeButton {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #003366;
+    color: #fafafa;
+    padding: 10px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    animation: spin 5s linear infinite, changeColors 2s ease-in-out infinite;
+    transition: color 0.5s ease-in-out;
+}
+
+#homeButton:hover {
+    color: #4caf50;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes changeColors {
+    from {
+        background-color: #ff4500;
+    }
+    to {
+        background-color: #4caf50;
+    }
+}
+
+.center-content:hover h2,
+.center-content:hover p {
+    color: #4caf50;
+    transition: color 0.5s ease-in-out;
+}
+
+/* Royal Blue Theme styles */
+body.royal-blue-theme {
+    --header-color: #007bff; /* Change the colors as needed */
+    --nav-color: #007bff;
+    --footer-color: #007bff;
+    background: linear-gradient(to right, var(--header-color), var(--footer-color));
+}
+
+body.royal-blue-theme h1,
+body.royal-blue-theme h2,
+body.royal-blue-theme p {
+    color: #000; /* Change text color as needed */
+    text-shadow: none; /* Remove any text shadows */
+}
+
+/* Additional styles for the royal blue theme if needed */
+
+
+/* Additional styles for the normal theme if needed */
+
+/* Pikachu Theme styles */
+body.pikachu-theme {
+    --header-color: #FFD700;
+    --nav-color: #FF4500;
+    --footer-color: #FFD700;
+    background: linear-gradient(to right, var(--header-color), var(--footer-color));
+}
+
+body.pikachu-theme h1,
+body.pikachu-theme h2,
+body.pikachu-theme p {
+    color: #FF4500;
+    text-shadow: 3px 3px 5px #FF4500;
+}
+
+/* Shadow Theme styles */
+body.shadow-theme {
+    --header-color: #8B0000;
+    --nav-color: #333333;
+    --footer-color: #000000;
+    background: linear-gradient(to right, var(--header-color), var(--footer-color));
+}
+
+body.shadow-theme h1,
+body.shadow-theme h2,
+body.shadow-theme p {
+    color: #FF4500;
+    text-shadow: 3px 3px 5px #FF4500;
+}
+
+body h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* Styles for the contact form */
+/* Styles for the contact form */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    background-color: #1e1e1e; /* Dark background color */
+    padding: 20px; /* Add padding for better appearance */
+    border-radius: 15px; /* Rounded corners */
+}
+
+form label {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #fff; /* Text color */
+}
+
+form input,
+form textarea {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px; /* Rounded shape */
+    background-color: #fff; /* Light background color */
+    color: #333; /* Text color */
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+form input:focus,
+form textarea:focus {
+    background-color: #f0f0f0; /* Lighter background on focus */
+    outline: none;
+}
+
+form textarea {
+    resize: none; /* Disable resizing */
+}
+
+form button {
+    padding: 15px 30px;
+    background-color: #ff4081; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 10px; /* Rounded shape */
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+form button:hover {
+    transform: translateY(-3px); /* Move up slightly on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Shadow effect on hover */
+}
+/* Styles for the contact form */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+form label {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #fff; /* Text color */
+}
+
+form input,
+form textarea {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 25px; /* Rounded shape */
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background with slight opacity */
+    color: #fff; /* Text color */
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+form input:focus,
+form textarea:focus {
+    background-color: rgba(255, 255, 255, 0.2); /* Darker background on focus */
+    outline: none;
+}
+
+form textarea {
+    resize: none; /* Disable resizing */
+}
+
+form button {
+    padding: 15px 30px;
+    background-color: #ff5722; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 25px; /* Rounded shape */
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+form button:hover {
+    transform: translateY(-3px); /* Move up slightly on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Shadow effect on hover */
+}
+.weather-info p {
+    font-size: 24px; /* Increase font size */
+    color: #00ffff; /* Neon cyan color */
+    text-shadow: 2px 2px 4px rgba(0, 255, 255, 0.5); /* Add neon glow effect */
+    margin-bottom: 10px; /* Add some space below the text */
+}
+
+#imageGallery {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.filter-buttons {
+    margin-bottom: 20px;
+}
+
+.filter-button {
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.filter-button {
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid transparent; /* Add border to make it look futuristic */
+    border-radius: 25px; /* Increase border-radius for a rounded futuristic look */
+    font-size: 18px; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    color: #fff; /* Text color */
+    background-image: linear-gradient(to right, #4f44ff, #9f74ff); /* Gradient background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth effect */
+    transition: all 0.3s ease; /* Add transition for smoothness */
+
+    /* Flashy effect on hover */
+    animation: glow 1.5s infinite alternate;
+}
+
+.filter-button:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+    border-color: #fffc00; /* Change border color on hover */
+    box-shadow: 0 0 20px rgba(255, 252, 0, 0.8); /* Change shadow color on hover */
+}
+.theme-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.theme-buttons button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid transparent; /* Add border to make it look futuristic */
+    border-radius: 25px; /* Increase border-radius for a rounded futuristic look */
+    font-size: 18px; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    color: #fff; /* Text color */
+    background-image: linear-gradient(to right, #4f44ff, #9f74ff); /* Gradient background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth effect */
+    transition: all 0.3s ease; /* Add transition for smoothness */
+
+    /* Flashy effect on hover */
+    animation: glow 1.5s infinite alternate;
+}
+
+.theme-buttons button:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+    border-color: #fffc00; /* Change border color on hover */
+    box-shadow: 0 0 20px rgba(255, 252, 0, 0.8); /* Change shadow color on hover */
+}
+
+@keyframes glow {
+    from {
+        filter: brightness(150%);
+    }
+    to {
+        filter: brightness(100%);
+    }
+}
+
+@keyframes glow {
+    from {
+        filter: brightness(150%);
+    }
+    to {
+        filter: brightness(100%);
+    }
+}
+
+#interactionsCount {
+    font-weight: bold;
+    color: #FF0000;
+}
+
+/* Flying emojis animation */
+#flyingEmojis {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none; /* Prevent the emojis from interfering with mouse events */
+}
+
+.flying-emoji {
+    font-size: 24px;
+    position: absolute;
+    animation: flyToTop 3s linear forwards; /* Change animation duration to match JavaScript */
+}
+
+@keyframes flyToTop {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100vh);
+  }
+}
+
+.flying-emoji {
+    position: fixed;
+    z-index: 9999;
+    animation: flyToTop 1s linear forwards; /* Adjust animation duration here */
+}
