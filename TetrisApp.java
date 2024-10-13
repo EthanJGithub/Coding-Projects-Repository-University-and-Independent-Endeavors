@@ -1,3 +1,4 @@
+import java.security.SecureRandom;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.scene.Parent;
@@ -21,7 +22,7 @@ public class TetrisApp extends Application {
     private Pane root = new Pane();
     private List<Tetromino> tetrominos = new ArrayList<>();
     private Tetromino currentTetromino;
-    private Random random = new Random();
+    private Random random = new SecureRandom();
     private long lastUpdate = 0;
     private int score = 0;
     private int level = 1;
@@ -281,11 +282,11 @@ class Tetrominoes {
     };
 
     static int[][] getRandomShape() {
-        return SHAPES[new Random().nextInt(SHAPES.length)];
+        return SHAPES[new SecureRandom().nextInt(SHAPES.length)];
     }
 
     static Color getRandomColor() {
-        return COLORS[new Random().nextInt(COLORS.length)];
+        return COLORS[new SecureRandom().nextInt(COLORS.length)];
     }
 
     static int getColorIndex(Color color) {
