@@ -1,4 +1,5 @@
 package quicksort;
+import java.security.SecureRandom;
 import java.util.Random;
 public class HoareQuicksort {
 
@@ -69,7 +70,7 @@ public class HoareQuicksort {
 
     private static int[] generateRandomArray(int size, int minValue, int maxValue) {
         int[] array = new int[size];
-        Random rand = new Random();
+        Random rand = new SecureRandom();
         for (int i = 0; i < size; i++) {
             array[i] = rand.nextInt(maxValue - minValue + 1) + minValue;
         }
