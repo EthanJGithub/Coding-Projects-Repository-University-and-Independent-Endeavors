@@ -10,6 +10,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -40,7 +41,7 @@ public class FlappyBird implements ActionListener, MouseListener, KeyListener
 		Timer timer = new Timer(20, this);
 
 		renderer = new Renderer();
-		rand = new Random();
+		rand = new SecureRandom();
 
 		jframe.add(renderer);
 		jframe.setTitle("Flappy Bird");
